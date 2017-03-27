@@ -92,6 +92,7 @@ public class UserControllerTest {
         assertEquals(HttpStatus.CREATED, response.getStatusCode());
         assertNotNull(response.getBody());
     }
+
     @Test
     public void testCreateUserWithNullId() {
         when(userService.createUser(any(User.class)))
@@ -105,6 +106,7 @@ public class UserControllerTest {
         assertEquals(HttpStatus.BAD_REQUEST, response.getStatusCode());
         assertNotNull(response.getBody());
     }
+
     @Test
     public void testUpdateUser() {
         when(userService.modifyUser(any(User.class)))
@@ -114,6 +116,7 @@ public class UserControllerTest {
         assertEquals(HttpStatus.OK, response.getStatusCode());
         assertNotNull(response.getBody());
     }
+
     @Test
     public void testDeleteUser() {
         ResponseEntity response = userController.deleteUser("1");

@@ -18,5 +18,4 @@ public class ErrorResponse {
     private String errorCode;
     private String errorMessage;
 
-
 }
